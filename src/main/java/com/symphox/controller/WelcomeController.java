@@ -30,7 +30,7 @@ public class WelcomeController {
 
 		logger.debug("index() is executed!");
 
-		model.put("title", helloWorldService.getTitle(""));
+		model.psut("title", helloWorldService.getTitle(""));
 		model.put("msg", helloWorldService.getDesc());
 		
 		return "index";
