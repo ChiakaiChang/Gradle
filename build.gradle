@@ -1,7 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'war'
-apply plugin: 'eclipse'
 apply plugin: 'jetty'
+
+defaultTasks 'war' 
 
 // JDK 7
 sourceCompatibility = 1.7
@@ -17,58 +18,7 @@ dependencies {
 	compile 'ch.qos.logback:logback-classic:1.1.3'
 	compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
 	compile 'javax.servlet:jstl:1.2'
-	compile 'javax.servlet:javax.servlet-api:3.0.1'
 	
-}
-
-// Embeded Jetty for testing
-jettyRun{
-	contextPath = "spring4"
-	httpPort = 8080
-}
-
-jettyRunWar{
-	contextPath = "spring4"
-	httpPort = 8080
-}
-
-task hello << {
-    println delegate.class.name
-    println delegate instanceof Task
-}
-
-task compile << {
-    println 'compiling source'
-}
-
-task compileTest(dependsOn: compile) << {
-    println 'compiling unit tests'
-}
-
-task test1(dependsOn: [compile, compileTest]) << {
-    println 'running unit tests'
-}
-
-task dist(dependsOn: [compile, test1]) << {
-    println 'building the distribution'
-}
-
-task mydoc(type:Copy) {
-    from 'src/main/doc'
-    into 'build/target/doc'
-}
-
-task sourcesJar(type: Jar, dependsOn:classes) {
-     classifier = 'sources'
-     from sourceSets.main.allSource
-}
- 
-task javadocJar(type: Jar, dependsOn:javadoc) {
-     classifier = 'javadoc'
-     from javadoc.destinationDir
-}
- 
-artifacts {
-     archives sourcesJar
-     archives javadocJar
+	testCompile 'junit:junit:4.12'
+	
 }
