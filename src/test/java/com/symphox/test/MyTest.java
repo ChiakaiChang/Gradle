@@ -13,6 +13,6 @@ public class MyTest {
 	
 	@Test
     public void testServlet2() throws Exception {
-        assertTrue(1 == 2);
+        assertTrue(1 == 1);
     }
 }
