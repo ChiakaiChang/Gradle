@@ -23,4 +23,8 @@ dependencies {
 	
 }
 
+war {
+	archiveName 'Gradle.war'
+}
+
 war.dependsOn test
