@@ -12,9 +12,9 @@ public class HelloWorldService {
 
 	public String getDesc() {
 
-		logger.debug("getDesc() is executed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		logger.debug("getDesc() is executed!");
 
-		return "Gradle + Spring MVC Hello World Example!!!!!!!!!!!!!!!!!!!!!!!!!";
+		return "Gradle + Spring MVC Hello World Example!";
 
 	}
 
@@ -23,7 +23,7 @@ public class HelloWorldService {
 		logger.debug("getTitle() is executed! $name : {}", name);
 
 		if(StringUtils.isEmpty(name)){
-			return "Hello World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+			return "Hello World!";
 		}else{
 			return "Hello " + name;
 		}
