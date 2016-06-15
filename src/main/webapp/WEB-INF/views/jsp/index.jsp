@@ -7,7 +7,7 @@
 
 <spring:url value="/resources/core/css/hello.css" var="coreCss" />
 <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
-<link href="${bootstrapCss}" rel="stylesheet" />
+<link href="http://211.76.142.160/gradle/css/bootstrap.min.css" rel="stylesheet" />
 <link href="${coreCss}" rel="stylesheet" />
 </head>
 
