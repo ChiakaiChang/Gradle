@@ -72,9 +72,9 @@
 <spring:url value="/resources/core/css/hello.js" var="coreJs" />
 <spring:url value="/resources/core/css/bootstrap.min.js" var="bootstrapJs" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://211.76.142.160/gradle/js/hello.js"></script>
 <script src="http://211.76.142.160/gradle/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 </body>
 </html>
