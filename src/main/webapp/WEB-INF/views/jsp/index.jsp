@@ -7,8 +7,8 @@
 
 <spring:url value="/resources/core/css/hello.css" var="coreCss" />
 <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
-<link href="http://211.76.142.160/css/bootstrap.min.css" rel="stylesheet" />
-<link href="http://211.76.142.160/css/hello.css" rel="stylesheet" />
+<link href="http://211.76.142.160/gradle/css/bootstrap.min.css" rel="stylesheet" />
+<link href="http://211.76.142.160/gradle/css/hello.css" rel="stylesheet" />
 </head>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -73,8 +73,8 @@
 <spring:url value="/resources/core/css/bootstrap.min.js" var="bootstrapJs" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="http://211.76.142.160/js/hello.js"></script>
-<script src="http://211.76.142.160/js/bootstrap.min.js"></script>
+<script src="http://211.76.142.160/gradle/js/hello.js"></script>
+<script src="http://211.76.142.160/gradle/js/bootstrap.min.js"></script>
 
 </body>
 </html>
