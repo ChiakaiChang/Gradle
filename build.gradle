@@ -31,8 +31,4 @@ war {
 	archiveName 'Gradle.war'
 }
 
-tasks.withType(Compile) {
-	options.encoding = 'UTF-8'
-}
-
 war.dependsOn test
