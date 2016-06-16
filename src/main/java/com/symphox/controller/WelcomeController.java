@@ -1,5 +1,6 @@
 package com.symphox.controller;
 
+import java.util.Date;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,13 +31,13 @@ public class WelcomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Map<String, Object> model, HttpServletRequest request) {
 		if(request.getSession().getAttribute("time") == null) {
-	            request.getSession().setAttribute("time", System.nanoTime());
+	            request.getSession().setAttribute("time", new Date());
 	        }
 	        
 		logger.debug("index() is executed!!!!!!!!!");
 
 		model.put("title", helloWorldService.getTitle(""));
-		model.put("msg", helloWorldService.getDesc() + request.getSession().getAttribute("time"));
+		model.put("msg", helloWorldService.getDesc() + "登入時間" + request.getSession().getAttribute("time"));
 		
 		return "index";
 	}
