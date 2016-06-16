@@ -2,6 +2,8 @@ package com.symphox.controller;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +28,15 @@ public class WelcomeController {
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String index(Map<String, Object> model) {
-
+	public String index(Map<String, Object> model, HttpServletRequest request) {
+		if(request.getSession().getAttribute("time") == null) {
+	            request.getSession().setAttribute("time", System.nanoTime());
+	        }
+	        
 		logger.debug("index() is executed!!!!!!!!!");
 
 		model.put("title", helloWorldService.getTitle(""));
-		model.put("msg", helloWorldService.getDesc());
+		model.put("msg", helloWorldService.getDesc() + request.getSession().getAttribute("time"));
 		
 		return "index";
 	}
