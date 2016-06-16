@@ -8,6 +8,8 @@ defaultTasks 'war'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
+compileJava.options.encoding = 'UTF-8'
+
 repositories {
     mavenLocal()
     mavenCentral()
@@ -27,6 +29,10 @@ dependencies {
 
 war {
 	archiveName 'Gradle.war'
+}
+
+tasks.withType(Compile) {
+	options.encoding = 'UTF-8'
 }
 
 war.dependsOn test
