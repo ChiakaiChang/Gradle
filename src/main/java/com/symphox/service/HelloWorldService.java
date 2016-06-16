@@ -14,7 +14,7 @@ public class HelloWorldService {
 
 		logger.debug("getDesc() is executed!");
 
-		return "Gradle + Spring MVC Hello World Example Ray Chiakai!";
+		return "Gradle + Spring MVC Hello World Example Chiakai!";
 
 	}
 
