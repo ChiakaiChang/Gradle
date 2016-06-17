@@ -30,10 +30,6 @@ public class WelcomeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Map<String, Object> model, HttpServletRequest request) {
-		if(request.getSession().getAttribute("time") == null) {
-	            request.getSession().setAttribute("time", new Date());
-	        }
-	        
 		logger.debug("index() is executed!!!!!!!!!");
 
 		model.put("title", helloWorldService.getTitle(""));
