@@ -5,7 +5,9 @@
 
 	<display-name>Gradle</display-name>
 	<description>Gradle and Spring MVC web application</description>
-
+	
+        <distributable/>
+	
 	<!-- For web context -->
 	<servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
