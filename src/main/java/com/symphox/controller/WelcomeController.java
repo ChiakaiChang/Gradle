@@ -37,21 +37,18 @@ public class WelcomeController {
 		logger.debug("index() is executed!!!!!!!!!");
 
 		model.put("title", helloWorldService.getTitle(""));
-		model.put("msg", helloWorldService.getDesc() + "登入時間" + request.getSession().getAttribute("time"));
+		model.put("msg", helloWorldService.getDesc() + "登入時間 : " + request.getSession().getAttribute("time"));
 		
 		return "index";
 	}
 
-	@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
-	public ModelAndView hello(@PathVariable("name") String name) {
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	public ModelAndView hello(@PathVariable("name") String name, HttpServletRequest request) {
 
-		logger.debug("hello() is executed - $name {}", name);
+		request.getSession().setAttribute("time", new Date());
 
 		ModelAndView model = new ModelAndView();
 		model.setViewName("index");
-		
-		model.addObject("title", helloWorldService.getTitle(name));
-		model.addObject("msg", helloWorldService.getDesc());
 		
 		return model;
 
