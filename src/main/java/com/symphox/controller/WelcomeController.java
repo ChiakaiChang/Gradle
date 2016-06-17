@@ -39,7 +39,7 @@ public class WelcomeController {
 	}
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
-	public ModelAndView hello(@PathVariable("name") String name, HttpServletRequest request) {
+	public ModelAndView hello(HttpServletRequest request) {
 
 		request.getSession().setAttribute("time", new Date());
 
