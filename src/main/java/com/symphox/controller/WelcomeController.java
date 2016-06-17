@@ -37,7 +37,7 @@ public class WelcomeController {
 		}
 		
 		model.put("title", helloWorldService.getTitle(""));
-		model.put("msg", helloWorldService.getDesc() + "登入時間 : " + request.getSession().getAttribute("time"));
+		model.put("msg", helloWorldService.getDesc() + " Login Time : " + request.getSession().getAttribute("time"));
 		
 		return "index";
 	}
