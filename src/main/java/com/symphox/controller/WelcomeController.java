@@ -31,7 +31,11 @@ public class WelcomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Map<String, Object> model, HttpServletRequest request) {
 		logger.debug("index() is executed!!!!!!!!!");
-
+		
+		if(request.getSession().getAttribute("time") == null) {
+			request.getSession().setAttribute("time", new Date());
+		}
+		
 		model.put("title", helloWorldService.getTitle(""));
 		model.put("msg", helloWorldService.getDesc() + "登入時間 : " + request.getSession().getAttribute("time"));
 		
@@ -40,8 +44,6 @@ public class WelcomeController {
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public ModelAndView hello(HttpServletRequest request) {
-
-		request.getSession().setAttribute("time", new Date());
 
 		ModelAndView model = new ModelAndView();
 		model.setViewName("index");
