@@ -14,7 +14,7 @@ public class HelloWorldService {
 
 		logger.debug("getDesc() is executed!");
 
-		return "Serving Server is " + System.getProperty("jboss.node.name");
+		return "Serving Server is " + System.getProperty("jboss.node.name" + " ! ");
 
 	}
 
