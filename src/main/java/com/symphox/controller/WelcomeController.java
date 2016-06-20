@@ -33,7 +33,7 @@ public class WelcomeController {
 		logger.debug("index() is executed!!!!!!!!!");
 		
 		if(request.getSession().getAttribute("time") == null) {
-			request.getSession().setAttribute("time", new int[1000]);
+			request.getSession().setAttribute("time", new Date());
 		}
 		
 		model.put("title", helloWorldService.getTitle(""));
