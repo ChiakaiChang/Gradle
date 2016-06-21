@@ -33,7 +33,7 @@ public class WelcomeController {
 		logger.debug("index() is executed!!!!!!!!!");
 		
 		if (request.getSession().getAttribute("time") == null) {
-	            request.getSession().setAttribute("time", new Byte[1024 * 1090]);
+	            request.getSession().setAttribute("time", new Byte[1024 * 1536]);
 	            logger.error("Save session !");
 	        } 
 		
