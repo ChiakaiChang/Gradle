@@ -34,7 +34,7 @@ public class WelcomeController {
 		
 		if (request.getSession().getAttribute("time") == null) {
 	            request.getSession().setAttribute("time", new Byte[1024 * 1024 * 1]);
-	            logger.error("記了 session");
+	            logger.error("Save session !");
 	        } 
 		
 		model.put("title", helloWorldService.getTitle(""));
