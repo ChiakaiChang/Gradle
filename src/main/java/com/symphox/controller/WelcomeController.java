@@ -32,7 +32,7 @@ public class WelcomeController {
 	public String index(Map<String, Object> model, HttpServletRequest request) {
 		logger.debug("index() is executed!!!!!!!!!");
 		
-		if (request.getSession().getAttribute("time").equals("")) {
+		if (request.getSession().getAttribute("time") == null) {
 	            request.getSession().setAttribute("time", new Byte[1024 * 1024]);
 	            logger.error("記了 session");
 	        } 
