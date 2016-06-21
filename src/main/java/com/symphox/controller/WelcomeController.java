@@ -33,7 +33,7 @@ public class WelcomeController {
 		logger.debug("index() is executed!!!!!!!!!");
 		
 		if (request.getSession().getAttribute("time") == null) {
-	            request.getSession().setAttribute("time", new Byte[1024 * 1024 * 10]);
+	            request.getSession().setAttribute("time", new Byte[1024 * 1024 * 1]);
 	            logger.error("記了 session");
 	        } 
 		
