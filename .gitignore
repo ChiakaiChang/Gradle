@@ -1,0 +1,6 @@
+.idea/*
+.gradle/*
+src/main/webapp/resources/node_modules
+src/main/webapp/resources/typings
+src/main/webapp/resources/.sass-cache
+src/main/webapp/resources/stylesheets
